@@ -35,6 +35,37 @@
 			name: 'Cultural',
 			pic: "img/cultural.jpg",
 			description: "Blah Blah Blah Blah"
+		},
+		{
+			name: 'Something',
+			pic: "img/trip.jpg",
+			description: "Blah Blah Blah Blah"
+		},
+		{
+			name: 'Educational',
+			pic: "img/cultural.jpg",
+			description: "Blah Blah Blah Blah"
+		},
+		{
+			name: 'Live The design',
+			pic: "img/social.jpg",
+			description: "Blah Blah Blah Blah"
+		},
+		{
+			name: 'Whatsup Yo',
+			pic: "img/tech.jpg",
+			description: "Blah Blah Blah Blah"
 		}
 	]
 })();
+
+window.addEventListener('load', async e =>{
+	if('serviceWorker' in navigator){
+		try{
+			navigator.serviceWorker.register('sw.js');
+			console.log('SW registered');
+		} catch(error){
+			console.log('SW registration failed');
+		}
+	}
+});
